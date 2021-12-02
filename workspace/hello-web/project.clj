@@ -9,6 +9,6 @@
 
                  [ring/ring-json "0.4.0"]
                  ]
-  :ring {:handler movie-booking-app.core/app}
+  :ring {:handler hello-web.core/app}
   :plugins [[lein-ring "0.12.5"]]
   :repl-options {:init-ns hello-web.core})
