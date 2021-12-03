@@ -1,9 +1,10 @@
-(ns hello-web.core(:require
+(ns hello-web-httpkit.core(:require
                     [compojure.core :refer :all]
-                    [ring.adapter.jetty :refer :all]
+                    ;[ring.adapter.jetty :refer :all]
                             [compojure.route :as route]
                             [ring.middleware.json :as middleware]
                             [ring.middleware.defaults :refer [wrap-defaults site-defaults api-defaults]])
+  (:use [org.httpkit.server :only [run-server]])
 
   )
 
@@ -27,7 +28,7 @@
 ;    "text/plain"))
 
 (defroutes app-routes
-           (GET "/hello" [] "Hello Clojure newest ")
+           (GET "/hello" [] "Hello Clojure fff ")
            ;(GET "/hello/:name" [name] (str "Hello " name) )
            (GET "/hello/:name" [name]
                 {:status  200
@@ -70,13 +71,19 @@
             )
   )
 
+;
+;(defn -mainold
+;  [& args]
+;  (run-jetty app {:port 3000})
+;
+;  )
+
 
 (defn -main
   [& args]
-  (run-jetty app {:port 3000})
+  (run-server app {:port 3000})
 
   )
-
 
 ;Use
 ;lein ring server-headless  to reload and run the server
