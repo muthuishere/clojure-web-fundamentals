@@ -1,0 +1,8 @@
+2021-12-05 15:46:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEMA_MIGRATIONS" not found; SQL statement:
+SELECT 1 FROM schema_migrations [42102-200]
+2021-12-05 16:23:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DIRECTOR VARCHAR(120)": "'Four denizens in the world of high-finance predict the credit and housing bubble collapse of the mid-2000s, and decide to take ... (182)"; SQL statement:
+INSERT INTO movies
+(plot,director,genres,title,year,actors,id,runtime,posterUrl)
+VALUES (?,?,?,?,?,?,?,?,?) [22001-200]

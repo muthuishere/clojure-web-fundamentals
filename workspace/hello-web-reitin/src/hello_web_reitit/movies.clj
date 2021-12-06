@@ -201,7 +201,6 @@
 
 
 
-
 (def app
   (middleware/wrap-format
     (ring/ring-handler
@@ -209,7 +208,12 @@
         ["/api"
 
          ["/movies" {
-                     :get  all-movies
+                     :get {
+
+                           :handler all-movies
+                           }
+
+
                      :post insert-movie
 
                      }]

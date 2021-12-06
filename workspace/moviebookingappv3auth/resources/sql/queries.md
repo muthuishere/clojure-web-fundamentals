@@ -1,0 +1,30 @@
+-- Working with HugSQL
+-- HugSQL takes the approach similar to HTML templating for writing SQL queries.
+-- The queries are written using plain SQL, and the dynamic parameters are specified
+-- using Clojure keyword syntax.
+-- HugSQL will use the SQL templates to automatically generate the functions for interacting with the database.
+--
+-- Conventionally the queries are placed in the resources/sql/queries.sql file.
+-- However, once your application grows you may consider splitting the queries into multiple files.
+--
+-- The format for the file can be seen below:
+--
+-- -- :name create-user! :! :n
+-- -- :doc creates a new user record
+-- INSERT INTO users
+-- (id, first_name, last_name, email, pass)
+-- VALUES (:id, :first_name, :last_name, :email, :pass)
+-- The name of the generated function is specified using -- :name comment. The name is followed by the command and the result flags.
+--
+-- The following command flags are available:
+--
+-- :? - query with a result-set (default)
+-- :! - any statement
+-- :<! - support for INSERT ... RETURNING
+-- :i! - support for insert and jdbc .getGeneratedKeys
+-- The result flags are:
+--
+-- :1 - one row as a hash-map
+-- :* - many rows as a vector of hash-maps
+-- :n - number of rows affected (inserted/updated/deleted)
+-- :raw - passthrough an untouched result (default)

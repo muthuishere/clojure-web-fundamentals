@@ -1,0 +1,1 @@
+web: java -Dclojure.main.report=stderr -cp target/uberjar/moviebookingappv2h2.jar clojure.main -m moviebookingappv2h2.core
