@@ -46,21 +46,18 @@
   (not (database-exists? db-name))
   )
 
-(defn query-engine [db-name]
-  (d/db (connect-db db-name))
+(defn query-engine []
+  (d/db (connect-db movie-db-name))
   )
 
 
 (defn connect-movie-db []
-  (connect-db "movies")
+  (connect-db movie-db-name)
   )
 
 
 
 
-(defn query-engine-for-movie []
-  (query-engine movie-db-name)
-  )
 
 
 
@@ -126,7 +123,7 @@
 
          ]
 
-       (query-engine-for-movie))
+       (query-engine))
 
   )
 
@@ -140,7 +137,7 @@
          [?movie :movie/id ?id]
 
          ]
-       (query-engine-for-movie)
+       (query-engine)
        movie-id
        )
   )
@@ -154,9 +151,15 @@
          [?movie :movie/id ?id]
 
          ]
-       (query-engine-for-movie)
+       (query-engine)
        movie-id
        )
+  )
+
+(defn all-movies-other [request]
+
+  (map #(d/pull (query-engine) '[*] %)   (get-all-entity-ids))
+
   )
 
 
@@ -182,7 +185,7 @@
 
          ]
 
-       (query-engine-for-movie))
+       (query-engine))
 
   )
 
@@ -206,7 +209,7 @@
 
          ]
 
-       (query-engine-for-movie) movie-id)
+       (query-engine) movie-id)
   )
 
 
@@ -214,6 +217,8 @@
 (defn parse-entity-id [[[entity-id]]]
   entity-id
   )
+
+
 (defn find-entity-id-by-movie-id [movie-id]
 
 
@@ -222,7 +227,7 @@
                            :where
                            [?entityid :movie/id ?id]
                            ]
-                         (query-engine-for-movie)
+                         (query-engine)
                          movie-id
                          ))
 

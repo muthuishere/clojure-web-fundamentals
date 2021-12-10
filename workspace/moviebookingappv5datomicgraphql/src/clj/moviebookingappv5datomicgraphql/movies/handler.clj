@@ -97,7 +97,9 @@
   ;Updated movie with insert movie
 
   (insert-movie {
-                 :body-params { :plot
+                 :body-params
+
+                 { :plot
                                "Four denizens in the world of high-finance predict the credit and housing bubble collapse of the mid-2000s, and decide to take on the big banks for their greed and lack of foresight.",
                                :director "Adam McKay",
                                :genres   ["Biography" "Comedy" "Drama"],

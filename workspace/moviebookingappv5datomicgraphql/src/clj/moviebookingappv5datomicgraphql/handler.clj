@@ -3,6 +3,7 @@
     [moviebookingappv5datomicgraphql.middleware :as middleware]
     [moviebookingappv5datomicgraphql.routes :refer [service-routes]]
     [reitit.swagger-ui :as swagger-ui]
+    [moviebookingappv5datomicgraphql.layout :as layout]
     [reitit.ring :as ring]
     [ring.middleware.content-type :refer [wrap-content-type]]
     [ring.middleware.webjars :refer [wrap-webjars]]
@@ -17,9 +18,19 @@
   :start
   (ring/ring-handler
     (ring/router
-      [["/" {:get
+      [
+       ["/" {:get
              {:handler (constantly {:status 301 :headers {"Location" "/api/api-docs/index.html"}}) }}]
-       (service-routes)])
+
+       ["/graphiql" {:get (fn [request]
+                            (layout/render request "graphiql.html"))}]
+
+
+       (service-routes)
+
+       ]
+
+      )
     (ring/routes
       (ring/create-resource-handler
         {:path "/"})

@@ -8,6 +8,7 @@
     [mount.core :as mount]
     [moviebookingappv5datomicgraphql.core :refer [start-app]]
     [moviebookingappv5datomicgraphql.db.core]
+    [moviebookingappv5datomicgraphql.datomic.movies.db]
     [conman.core :as conman]
     [luminus-migrations.core :as migrations]))
 

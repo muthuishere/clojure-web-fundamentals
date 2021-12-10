@@ -1,3 +1,7 @@
+
+Luminus 
+When running via main , add jvm args -Dconf=dev-config.edn
+
 ## Setup Environment
 
 Click the below button to setup your environment

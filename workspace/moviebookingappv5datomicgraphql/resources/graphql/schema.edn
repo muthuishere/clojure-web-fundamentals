@@ -1,0 +1,63 @@
+{:enums
+ {:episode
+  {:description "The episodes of the original Star Wars trilogy."
+   :values [:NEWHOPE :EMPIRE :JEDI]}}
+
+ :objects
+ {
+  :movie
+  {
+   :fields   {
+              :plot {:type String}
+             :director {:type String}
+             :genres  {:type (list String)}
+             :title {:type String}
+             :year {:type Int}
+             :actors {:type (list String)}
+              :id {:type Int}
+             :runtime {:type Int}
+             :posterUrl {:type String}
+             }
+
+
+
+   }
+  :droid
+  {:fields {:primary_functions {:type (list String)}
+            :id {:type Int}
+            :name {:type String}
+            :appears_in {:type (list :episode)}}}
+
+  :human
+  {:fields {
+            :id {:type Int}
+            :name {:type String}
+            :home_planet {:type String}
+            :appears_in {:type (list :episode)}
+
+            }}}
+
+ :queries
+ {
+  :allmovies {
+              :type (list :movie)
+              :args {}
+              :resolve :get-all-movies
+              }
+  :hero {:type (non-null :human)
+         :args {:id {:type String :default-value "2001"}}
+         :resolve :get-hero}
+  :droid {:type :droid
+          :args {:name {:type String}}
+          :resolve :get-droid}}
+
+ :mutations {
+            :insertmovie {
+                          :type
+
+                          }
+
+             }
+
+
+ }

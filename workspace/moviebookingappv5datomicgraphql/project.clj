@@ -36,8 +36,24 @@
                  [buddy/buddy-auth "3.0.1"]
                  [clj-time "0.15.2"]
                  ;Datomic
-                 
+                 [com.datomic/dev-local "1.0.238"]
+                 ;if using some cloud
+                 [com.datomic/client-cloud "1.0.117"]
+
+                 ;GraphQL
+                 [com.walmartlabs/lacinia "0.32.0"]
+
+
+
+
                  ;Graphql
+                 ]
+
+  :repositories [
+                 ["cognitect-dev-tools" {:url      "https://dev-tools.cognitect.com/maven/releases/"
+                                         :username "muthuishere@gmail.com"
+                                         :password "CB5BB29D51A198961E1A1C68509D410458A29E10"}]
+
                  ]
 
   :min-lein-version "2.0.0"

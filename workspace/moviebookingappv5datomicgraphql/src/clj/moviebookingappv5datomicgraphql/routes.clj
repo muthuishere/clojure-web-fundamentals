@@ -9,6 +9,10 @@
     [reitit.ring.middleware.parameters :as parameters]
     [moviebookingappv5datomicgraphql.middleware.formats :as formats]
     [ring.util.http-response :refer :all]
+
+
+    [moviebookingappv5datomicgraphql.graphql.core :as graphql]
+
     [moviebookingappv5datomicgraphql.users.routes :as users]
     [moviebookingappv5datomicgraphql.movies.routes :as movies]
     [clojure.java.io :as io]))
@@ -50,6 +54,11 @@
 
    (users/routes)
    (movies/routes)
+   ["/graphql" {:no-doc true
+                :post (fn [req]
+                        (ok (graphql/execute-request (-> req :body slurp))))}
+    ]
+
    ["/ping"
     {:get (constantly (ok {:message "pong"}))
 
