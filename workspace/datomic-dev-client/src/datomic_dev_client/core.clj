@@ -7,7 +7,10 @@
     )
   )
 (def cfg {:server-type :dev-local
-          :system      "dev"})
+          :system      "dev"
+          }
+          
+          )
 (def movie-db-name "movies")
 (def client (d/client cfg))
 
@@ -256,7 +259,7 @@
   (delete-by-movie-id 2)
 
 
-(find-all-movie-ids)
+;(find-all-movie-ids)
 
 (find-entity-id-by-movie-id 2)
   (get-all-movies)

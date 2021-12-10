@@ -1,0 +1,32 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.8.3"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.26.0"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉datomic-dev-client.core꞉> 
+; Jack-in done.
+clj꞉datomic-dev-client.core꞉> 
+; Evaluating file: core.clj
+#'datomic-dev-client.core/foo
+clj꞉datomic-dev-client.core꞉> 
+Creating Database
+Creating Schema
+inserting movies
+{:db-before #datomic.core.db.Db{:id movies, :basisT 6, :indexBasisT 0, :index-root-id nil, :asOfT nil, :sinceT nil, :raw nil}, :db-after #datomic.core.db.Db{:id movies, :basisT 7, :indexBasisT 0, :index-root-id nil, :asOfT nil, :sinceT nil, :raw nil}, :tx-data #object[java.util.ArrayList 0x33e6543f [datomic.core.db.Datum@fbf60837, datomic.core.db.Datum@c0ec9a18, datomic.core.db.Datum@3e5c8678, datomic.core.db.Datum@f2409b13, datomic.core.db.Datum@309122cc, datomic.core.db.Datum@cecefeee, datomic.core.db.Datum@a0c1dc3, datomic.core.db.Datum@f565d544, datomic.core.db.Datum@54603b24, datomic.core.db.Datum@1437a45d, datomic.core.db.Datum@1f166083, datomic.core.db.Datum@e4db1716, datomic.core.db.Datum@3b026c30, datomic.core.db.Datum@c8543738, datomic.core.db.Datum@34f16fdc, datomic.core.db.Datum@1e79b980, datomic.core.db.Datum@73eb9e52, datomic.core.db.Datum@f79f1d65, datomic.core.db.Datum@1d638e82, datomic.core.db.Datum@a577d134, datomic.core.db.Datum@95fea371, datomic.core.db.Datum@61204da, datomic.core.db.Datum
+@d09861e, datomic.core.db.Datum@40b79b5e, datomic.core.db.Datum@2c2b1304, datomic.core.db.Datum@b560cf24, datomic.core.db.Datum@62bbb796, datomic.core.db.Datum@e68beeab, datomic.core.db.Datum@81ee5fd, datomic.core.db.Datum@d2786709, datomic.core.db.Datum@e77139c9, datomic.core.db.Datum@a5235e2e, datomic.core.db.Datum@2650cdcc, datomic.core.db.Datum@2d8f3601, datomic.core.db.Datum@59e54922, datomic.core.db.Datum@dc0f51cf, datomic.core.db.Datum@95d0e88b, datomic.core.db.Datum@b9a51fa2, datomic.core.db.Datum@c1f70176, datomic.core.db.Datum@58bcdd56, datomic.core.db.Datum@a4670760, datomic.core.db.Datum@be594a22, datomic.core.db.Datum@f48edc75, datomic.core.db.Datum@2b0f6f7b, datomic.core.db.Datum@1d3b6106, datomic.core.db.Datum@fc7d131e, datomic.core.db.Datum@6aa338ad, datomic.core.db.Datum@8f06a879, datomic.core.db.Datum@75aaf37d, datomic.core.db.Datum@47fcf9cd, datomic.core.db.Datum@371dcb22, datomic.core.db.Datum@61295ead, datomic.core.db.Datum@d888193c, datomic.core.db.Datum@414ac01e]], :tempids {}}
+nil
+clj꞉datomic-dev-client.core꞉> 
+[{:title "Beetlejuice", :plot "A couple of recently deceased ghosts contract the services of a \"bio-exorcist\" in order to remove the obnoxious new owners of their house.", :director "Tim Burton", :actors #{"Annie McEnroe" "Maurice Page" "Geena Davis" "Alec Baldwin"}, :genres #{"Fantasy" "Comedy"}, :year 1988, :id 1, :runtime 92, :posterUrl "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUwODE3MDE0MV5BMl5BanBnXkFtZTgwNTk1MjI4MzE@._V1_SX300.jpg"} {:title "Crocodile Dundee", :plot "An American reporter goes to the Australian outback to meet an eccentric crocodile poacher and invites him to New York City.", :director "Peter Faiman", :actors #{"John Meillon" "Linda Kozlowski" "David Gulpilil" "Paul Hogan"}, :genres #{"Comedy" "Adventure"}, :year 1986, :id 4, :runtime 97, :posterUrl "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg0MTU1MTg4NF5BMl5BanBnXkFtZTgwMDgzNzYxMTE@._V1_SX300.jpg"} {:title "The Cotton Club", :plot "The Cotton Club was a famous night club in Harlem. The story follows the people that visited the club, those that ran it, and is peppered with the Jazz music that made it so famous.", :director "Francis Ford Coppola", :actors #{"Lonette McKee" "Richard Gere" "Diane Lane" "Gregory Hines"}, :genres #{"Music" "Crime" "Drama"}, :year 1984, :id 2, :runtime 127, :posterUrl "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg"} {:title "The Shawshank Redemption", :plot "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.", :director "Frank Darabont", :actors #{"Tim Robbins" "Morgan Freeman" "William Sadler" "Bob Gunton"}, :genres #{"Crime" "Drama"}, :year 1994, :id 3, :runtime 142, :posterUrl "https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX300.jpg"}]
+clj꞉datomic-dev-client.core꞉> 
