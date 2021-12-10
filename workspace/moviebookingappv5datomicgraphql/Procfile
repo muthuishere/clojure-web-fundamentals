@@ -1,0 +1,1 @@
+web: java -Dclojure.main.report=stderr -cp target/uberjar/moviebookingappv5datomicgraphql.jar clojure.main -m moviebookingappv5datomicgraphql.core

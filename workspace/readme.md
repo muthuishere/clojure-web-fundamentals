@@ -54,3 +54,24 @@ lein new luminus moviebookingapp +service +swagger +h2
 ;lein migratus create insert-movies
 
 ; lein run migrate
+
+; Setup movie with routes
+
+;setup authentication
+
+;create authentication 
+
+;setup authorization
+
+
+;Part 3
+
+;set Authorization on All Routes
+
+
+Work On Clojure Script
+
+
+
+;Part 5
+

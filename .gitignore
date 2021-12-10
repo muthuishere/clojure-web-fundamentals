@@ -14,3 +14,5 @@ pom.xml.asc
 .cpcache/
 /workspace/clojure-fundamentals/target
 .idea
+.lsp
+.clj-kondo
