@@ -24,7 +24,7 @@ a binding.
 
 Create a project 
 
-lein new luminus moviebookingappv1 +service +swagger
+lein new luminus moviesappv1 +service +swagger
 
 
 Explain About start stop with mount

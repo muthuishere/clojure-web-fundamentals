@@ -51,9 +51,18 @@
           :args {:name {:type String}}
           :resolve :get-droid}}
 
+ ;https://lacinia.readthedocs.io/en/latest/tutorial/rating-mutation.html
  :mutations {
             :insertmovie {
-                          :type
+                          ;type
+                          ;args
+                          ;resolve
+                          ;:args
+                          ;   {:game_id {:type (non-null ID)}
+                          ;    :member_id {:type (non-null ID)}
+                          ;    :rating {:type (non-null Int)
+                          ;             :description "Game rating as a number between 1 and 5."}}
+
 
                           }
 

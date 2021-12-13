@@ -229,27 +229,27 @@
 ))
 
 
-;
-;(def app
-;
-;        ["/api" [
-;
-;                 ["/movies" {
-;                             :get  all-movies
-;                             :post insert-movie
-;
-;                             }]
-;
-;                 ["/movies/:id" {
-;                                 :get movie-by-id
-;                                 :put update-movie-by-id
-;                                 :delete delete-movie-by-id
-;
-;                                 }]
-;
-;                 ]]
-;
-;        ))))
+
+;; (def app
+
+;;         ["/api" [
+
+;;                  ["/movies" {
+;;                              :get  all-movies
+;;                              :post insert-movie
+
+;;                              }]
+
+;;                  ["/movies/:id" {
+;;                                  :get movie-by-id
+;;                                  :put update-movie-by-id
+;;                                  :delete delete-movie-by-id
+
+;;                                  }]
+
+;;                  ]]
+
+;;         ))))
 
 
 

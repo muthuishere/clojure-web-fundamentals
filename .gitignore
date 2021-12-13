@@ -16,3 +16,4 @@ pom.xml.asc
 .idea
 .lsp
 .clj-kondo
+.shadow-cljs

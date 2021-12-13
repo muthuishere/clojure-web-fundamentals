@@ -9,4 +9,16 @@ vscode:
 ports:
   - port: 3000
     onOpen: open-preview
+  - port: 4200
+    onOpen: open-preview
+  - port: 7000
+    onOpen: open-preview
+  - port: 8080
+    onOpen: open-preview
+  - port: 9630
+    onOpen: open-preview
+  - port: 7002
+    onOpen: open-preview
+                        
+    
   

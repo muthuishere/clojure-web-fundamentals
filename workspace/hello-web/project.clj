@@ -9,8 +9,7 @@
                  [ring/ring-core "1.7.1"]
                  [ring/ring-jetty-adapter "1.7.1"]
                  [ring/ring-defaults "0.3.2"]
-                 [compojure "1.6.1"]
-                 ;[metosin/compojure-api "2.0.0-alpha31"]
+                 [compojure "1.6.1"]               
 
                  [ring/ring-json "0.4.0"]
                  ]
